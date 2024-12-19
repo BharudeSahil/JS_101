@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Roll Game</title>
+    <style>
+      /* styles.css */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #121212;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+      }
+
+      .card {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 150px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      }
+
+      .dice {
+        font-size: 3rem;
+        margin-top: 20px;
+      }
+
+      .score {
+        text-align: center;
+      }
+
+      #roll-button {
+        background-color: #282828;
+        color: white;
+        border: 2px solid white;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+      }
+
+      #roll-button:hover {
+        background-color: white;
+        color: #282828;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" id="player1-card">
+        <h2>Player 1</h2>
+        <div class="dice" id="player1-dice">🎲</div>
+      </div>
+
+      <div class="score">
+        <h1 id="result">Roll the Dice!</h1>
+        <button id="roll-button">Roll Dice</button>
+      </div>
+
+      <div class="card" id="player2-card">
+        <h2>Player 2</h2>
+        <div class="dice" id="player2-dice">🎲</div>
+      </div>
+    </div>
+    <script src="dice.js"></script>
+  </body>
+</html>

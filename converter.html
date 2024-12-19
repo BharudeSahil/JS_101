@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Unit Converter</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        select, input, button {
+            width: calc(50% - 10px);
+            padding: 10px;
+            margin: 10px 5px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            background-color: #252525;
+            color: #ffffff;
+        }
+
+        button {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px #ffffff;
+        }
+
+        .dropdowns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input-boxes {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .calculate-button {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Dynamic Unit Converter</h1>
+
+        <select id="unit-type">
+            <option value="temperature">Temperature</option>
+            <option value="weight">Weight</option>
+            <option value="length">Length</option>
+            <option value="data">Data</option>
+            <option value="area">Area</option>
+            <option value="speed">Speed</option>
+            <option value="time">Time</option>
+            <option value="volume">Volume</option>
+        </select>
+
+        <div class="input-boxes">
+            <input type="number" id="input1" placeholder="Enter value">
+            <input type="number" id="input2" placeholder="Output" readonly>
+        </div>
+
+        <div class="dropdowns">
+            <select id="unit1"></select>
+            <select id="unit2"></select>
+        </div>
+
+        <button class="calculate-button" id="calculate">Calculate</button>
+    </div>
+
+    <script src="./converter.js"></script>
+</body>
+</html>
